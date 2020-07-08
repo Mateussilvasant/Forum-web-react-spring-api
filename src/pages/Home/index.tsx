@@ -3,19 +3,11 @@ import "./index.css";
 import {FiSearch} from 'react-icons/fi';
 import SidebarComponent from '../../components/Sidebar'
 import NavbarComponent from '../../components/Navbar';
-
+import TopicoResumido from '../../interfaces/TopicoResumido';
+import ListaTopicos from '../../components/ListaTopicos';
 
 
 const Home = () => {
-
-   interface TopicoResumido{
-      idTopico : number,
-      titulo : string,
-      conteudo : string,
-      dataCriacao : string,
-      nomeCriador : string,
-      qtdComentarios : number
-   }
 
    const listaTopicos : TopicoResumido[]  = [
       {
@@ -73,37 +65,16 @@ const Home = () => {
 
 
      return ( 
-        <div className="home">
+        <div className="init-page">
          <SidebarComponent/>
-         <div className="content-home">
+         <div className="main-container">
          <NavbarComponent/>
            <main className="container">
-             <section className="content">
-              <ul>
-               {getTopicos.map((topico : TopicoResumido) => (
-                  <li className="topico-container" key={topico.idTopico}>
-                        <strong>{topico.nomeCriador}</strong>
-                        <p>{topico.dataCriacao}</p>
-                        <div className="topic-content">
-                           <h1>{topico.titulo}</h1>
-                           <pre>{topico.conteudo}</pre>
-                           <a href="/">Leia mais...</a>
-                           <section>
-                              <small>{topico.qtdComentarios}</small>
-                              <p>Comentários</p>   
-                           </section>
-                        </div>
-                        <hr></hr> 
-                  </li> 
-               ))}
-               </ul>
-               </section>
+               <ListaTopicos topicos={getTopicos}/>
            </main>
            <footer>
            </footer>
          </div>
-
-         
         </div>  
      );
  }
