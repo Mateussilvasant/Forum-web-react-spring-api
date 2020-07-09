@@ -33,7 +33,7 @@ hr {
 }
 
 
-@media screen and (min-width: 600px){
+@media screen and (min-width: 660px){
 
     .init-page  {
         display: flex;

@@ -7,7 +7,7 @@ import TopicoResumido from '../../interfaces/TopicoResumido';
 import ListaTopicos from '../../components/ListaTopicos';
 
 
-const Home = () => {
+const Profile = () => {
 
    const listaTopicos : TopicoResumido[]  = [
       {
@@ -66,7 +66,7 @@ const Home = () => {
 
      return ( 
         <div className="init-page">
-         <SidebarComponent/>
+         <SidebarComponent posicao={0}/>
          <div className="main-container">
          <NavbarComponent/>
            <main className="container">
@@ -79,4 +79,4 @@ const Home = () => {
      );
  }
 
- export default Home;
+ export default Profile;

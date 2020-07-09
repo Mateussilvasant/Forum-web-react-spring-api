@@ -1,11 +1,11 @@
 import { BrowserRouter, Route } from 'react-router-dom';
 import React from 'react';
-import Home from "./pages/Home";
+import Profile from "./pages/Profile";
 
 function Routes(){
     return (
         <BrowserRouter>
-            <Route component={Home} path="/" exact/>
+            <Route component={Profile} path="/" exact/>
         </BrowserRouter>
     );
 }
