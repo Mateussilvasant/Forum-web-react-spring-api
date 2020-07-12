@@ -1,20 +1,23 @@
 
 
-@media only screen and (min-width:321px) and (max-width:768px){
+
+
+
+@media screen and (min-width:660px) and (max-width:900px){
     .sidebar ul li > div button{
-        font-size: 0;
+        display: none;
     }
 
     .sidebar ul li > .buttonSelect{
         padding-left: 24px;
-    }
+    }       
 
     .sidebar ul li > .buttonSelect{
         width: auto;
     }    
 }
 
-@media screen and (min-width: 321px){
+@media screen and (min-width: 660px){
 
     .sidebar{
         display: flex;
