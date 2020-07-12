@@ -1,44 +1,66 @@
 
 
+@media only screen and (min-width:321px) and (max-width:768px){
+    .sidebar ul li > div button{
+        font-size: 0;
+    }
 
+    .sidebar ul li > .buttonSelect{
+        padding-left: 24px;
+    }
 
-@media screen and (min-width: 660px){
+    .sidebar ul li > .buttonSelect{
+        width: auto;
+    }    
+}
+
+@media screen and (min-width: 321px){
 
     .sidebar{
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;    
-        width: 20%;
+        flex: 0 0 12% ;
         border-right: 2px solid #4a4949;
+        padding: 2%;
     }
 
-    .sidebar ul > li button{
+    .button-normal{
         background: #292929;
         font: 500 12px Poppins, sans-serif;  
         color:  #919191;
         margin-left: 12px;
     }
 
-    .sidebar ul > li .icon-item{
-        color:  #919191;
+    .button-text-select{
+        background: none;
+        font: 500 12px Poppins, sans-serif;  
+        color:  #f0f0f0;
+        margin-left: 12px;
     }
     
-    .sidebar ul > .buttonItem{
-        margin-bottom: 4px;
+    .sidebar ul > li .buttonItem{
+        color: #919191;
+        padding: 12px;
+    }
+
+    .sidebar ul > li div{
+        margin-bottom: 8px;
         display: flex;
         flex-direction: row;
         align-items: center;
-        padding: 12px;
+        justify-content: center;
     }
-    
     
     .buttonSelect{
         font: 500 14px Poppins, sans-serif;   
         background: rgb(72,186,148);
-        background: linear-gradient(90deg, rgba(72,186,148,1) 0%, rgba(87,226,180,1) 100%);    box-shadow: 0 0 6px rgb(16, 228, 164);
+        background: linear-gradient(90deg, rgba(72,186,148,1) 0%, rgba(87,226,180,1) 100%);   
+        box-shadow: 0 0 6px rgb(16, 228, 164);
         color: #f0f0f0;
-        padding: 8px;
+        padding: 12px;
+        width: 220px;
         border-radius: 18px;
         white-space: nowrap;
     }    

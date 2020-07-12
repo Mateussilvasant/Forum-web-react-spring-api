@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import './index.css';
 import {FaBookReader,FaComments} from 'react-icons/fa';
 import { IconType, IconBaseProps } from 'react-icons/lib';
@@ -12,21 +12,21 @@ const SidebarComponent = (props : {posicao : number}) =>{
       {
         valor : "Meus tópicos", 
         path : "", 
-        icone : <FaBookReader className="icon-item" size={20}/>
+        icone : <FaBookReader size={16}/>
       },
       {
         valor : "Meus Comentários", 
         path : "",
-        icone : <FaComments className="icon-item" size={20}/>
+        icone : <FaComments size={16}/>
       }
     ];
 
     function renderizarOpcao(opcao : OpcaoSidebar, indice : number, posicaoAtivada : number){
 
       if(indice === posicaoAtivada){
-        return  <OpcaoItem ativo={true} opcao={opcao}/>;
+        return  <OpcaoItem key={opcao.valor} ativo={true} opcao={opcao}/>
       } else {
-        return  <OpcaoItem ativo={false} opcao={opcao}/>;
+        return  <OpcaoItem  key={opcao.valor} ativo={false} opcao={opcao}/>
       }
 
     }

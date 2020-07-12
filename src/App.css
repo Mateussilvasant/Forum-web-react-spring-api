@@ -30,6 +30,7 @@ hr {
 .buttonLink{
     color:  #919191;
     text-decoration: none;
+    font: 500 14px Poppins, sans-serif;   
 }
 
 
@@ -42,7 +43,7 @@ hr {
     }
     
     .main-container{
-        width: 82%;
+        width: 100%;
         overflow-x: hidden;
     }
 
