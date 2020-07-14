@@ -2,7 +2,7 @@ import React from 'react';
 import './index.css';
 import {FaBookReader,FaComments} from 'react-icons/fa';
 import { IconType, IconBaseProps } from 'react-icons/lib';
-import { OpcaoItem } from '../OpcaoItemSidebar';
+import { ItemSidebar } from '../ItemSidebar';
 import { OpcaoSidebar } from '../../interfaces/OpcaoSidebar';
 
 
@@ -24,9 +24,9 @@ const SidebarComponent = (props : {posicao : number}) =>{
     function renderizarOpcao(opcao : OpcaoSidebar, indice : number, posicaoAtivada : number){
 
       if(indice === posicaoAtivada){
-        return  <OpcaoItem key={opcao.valor} ativo={true} opcao={opcao}/>
+        return  <ItemSidebar key={opcao.valor} ativo={true} opcao={opcao}/>
       } else {
-        return  <OpcaoItem  key={opcao.valor} ativo={false} opcao={opcao}/>
+        return  <ItemSidebar  key={opcao.valor} ativo={false} opcao={opcao}/>
       }
 
     }

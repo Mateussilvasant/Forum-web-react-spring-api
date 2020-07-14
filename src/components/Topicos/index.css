@@ -20,3 +20,21 @@
     text-overflow: ellipsis; 
     overflow: hidden;
 }
+
+.topico-container strong{
+    color: #e0e0e0;
+    font: 500 12px Poppins, sans-serif;  
+}
+
+.topico-container small{
+    color: #919191 ;
+}
+
+.topic-content h1{
+    font: 500 24px Poppins, sans-serif; 
+    color: #d3d3d3;
+}
+
+.topic-content p{
+    color:  #818080;   
+}

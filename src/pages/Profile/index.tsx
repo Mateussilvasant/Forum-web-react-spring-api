@@ -2,9 +2,9 @@ import React, {useState} from 'react';
 import "./index.css";
 import {FiSearch} from 'react-icons/fi';
 import SidebarComponent from '../../components/Sidebar'
-import NavbarComponent from '../../components/Navbar';
+import Navbar from '../../components/Navbar';
 import TopicoResumido from '../../interfaces/TopicoResumido';
-import ListaTopicos from '../../components/ListaTopicos';
+import Topicos from '../../components/Topicos';
 
 
 const Profile = () => {
@@ -15,47 +15,47 @@ const Profile = () => {
          titulo : "ReactJS um breve Tutorial",
          conteudo : "O React balbalbalbalblabalbalbalblablalbalblaballba",
          dataCriacao : "12/02/2019",
-         nomeCriador : "Mateus",         
+         nomeCriador : "Mateus Silva",         
          qtdComentarios : 10
       },
       {
          idTopico : 8,
-         titulo : "ReactJS um breve Tutorial",
+         titulo : "React Native: Mobile",
          conteudo : "O React balbalbalbfdsfdasfdsafdas\nalblabalbalbalblablalbal\nblaballbfdsafdafdafdasfdasfdasa",
          dataCriacao : "12/02/2020",
-         nomeCriador : "Mateus",         
+         nomeCriador : "Mateus Silva",         
          qtdComentarios : 5
       },
       {
          idTopico : 9,
-         titulo : "ReactJS um breve Tutorial",
+         titulo : "Springboot: Backend",
          conteudo : "O React balbalbalfdsafdsafdsafdaskfdjfjdjdfj\nbalblabalbalbalblablalbal\nblaballbfdsafdafdafdasfdasfdasa",
          dataCriacao : "12/02/2020",
-         nomeCriador : "Mateus",         
+         nomeCriador : "Mateus Silva",         
          qtdComentarios : 5
       },
       {
          idTopico : 10,
-         titulo : "ReactJS um breve Tutorial",
+         titulo : "O mundo do Javascript ",
          conteudo : "O React balbalbalbalblabalbalbalblablalbal\nblaballbfdsafdafdafdasfdasfdasa",
          dataCriacao : "12/02/2020",
-         nomeCriador : "Mateus",         
+         nomeCriador : "Mateus Silva",         
          qtdComentarios : 5
       },
       {
          idTopico : 11,
-         titulo : "ReactJS um breve Tutorial",
+         titulo : "A mágia do Typescript",
          conteudo : "O React balbalbalbfdsfdasfdsafdas\nalblabalbalbalblablalbal\nblaballbfdsafdafdafdasfdasfdasa",
          dataCriacao : "12/02/2020",
-         nomeCriador : "Mateus",         
+         nomeCriador : "Mateus Silva",         
          qtdComentarios : 5
       },
       {
          idTopico : 12,
-         titulo : "ReactJS um breve Tutorial",
+         titulo : "Tudo que você precisa saber sobre o mundo do Desenvolvimento",
          conteudo : "O React balbalbalfdsafdsafdsafdaskfdjfjdjdfj\nbalblabalbalbalblablalbal\nblaballbfdsafdafdafdasfdasfdasa",
          dataCriacao : "12/02/2020",
-         nomeCriador : "Mateus",         
+         nomeCriador : "Mateus Silva",         
          qtdComentarios : 5
       }
    ];
@@ -67,14 +67,14 @@ const Profile = () => {
      return ( 
         <div className="init-page">
          <SidebarComponent posicao={0}/>
-         <div className="main-container">
-         <NavbarComponent/>
-           <main className="container">
-               <ListaTopicos topicos={getTopicos}/>
-           </main>
-           <footer>
-           </footer>
-         </div>
+            <div className="main-container">
+               <Navbar/>
+                  <main className="container">
+                     <Topicos topicos={getTopicos}/>
+                  </main>
+                  <footer>
+                  </footer>
+            </div>
         </div>  
      );
  }

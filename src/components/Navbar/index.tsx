@@ -2,7 +2,7 @@ import React from 'react';
 import { FiSearch } from 'react-icons/fi';
 import './index.css'
 
-const NavbarComponent = () =>{
+const Navbar = () =>{
     return (
         <header>  
               <nav className="navbar-home">
@@ -21,4 +21,4 @@ const NavbarComponent = () =>{
     );
 };
 
-export default NavbarComponent;
+export default Navbar;

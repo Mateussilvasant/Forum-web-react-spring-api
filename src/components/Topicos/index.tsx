@@ -4,13 +4,13 @@ import {FaComment} from 'react-icons/fa';
 import './index.css';
 
 
-const ListaTopicos = (props : {topicos : TopicoResumido[]}) =>{
+const Topicos = (props : {topicos : TopicoResumido[]}) =>{
     return (
         <section className="content">
         {props.topicos.map((topico : TopicoResumido) => (
             <article className="topico-container" key={topico.idTopico}>
                   <strong>{topico.nomeCriador}</strong>
-                  <p>{topico.dataCriacao}</p>
+                  <small>{topico.dataCriacao}</small>
                   <div className="topic-content">
                      <h1>{topico.titulo}</h1>
                      <p>{topico.conteudo}</p>
@@ -26,4 +26,4 @@ const ListaTopicos = (props : {topicos : TopicoResumido[]}) =>{
     );
 }
 
-export default ListaTopicos;
+export default Topicos;
