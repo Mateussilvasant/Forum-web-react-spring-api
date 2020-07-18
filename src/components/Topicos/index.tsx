@@ -1,6 +1,6 @@
 import React from 'react';
 import TopicoResumido from '../../interfaces/TopicoResumido';
-import {FaComment} from 'react-icons/fa';
+import {FaComments} from 'react-icons/fa';
 import './index.css';
 
 
@@ -14,10 +14,12 @@ const Topicos = (props : {topicos : TopicoResumido[]}) =>{
                   <div className="topic-content">
                      <h1>{topico.titulo}</h1>
                      <p>{topico.conteudo}</p>
-                     <a href="/">Leia mais...</a>
-                     <section>
-                         <FaComment size={15}/>  
-                        <small>{topico.qtdComentarios}</small>
+                     <section className="link-section">
+                        <a href="/">Leia mais...</a>
+                     </section>
+                     <section className="comment-section">
+                         <FaComments className="icon-comment" color="#03a5fc" size={15}/>  
+                        <small>{topico.qtdComentarios} comentários.</small>
                      </section>
                   </div>
                 </article> 

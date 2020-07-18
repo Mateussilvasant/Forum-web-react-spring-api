@@ -30,7 +30,7 @@
     }
 
     .button-normal{
-        background: #292929;
+        background: #262626;
         font: 500 12px Poppins, sans-serif;  
         color:  #919191;
         margin-left: 12px;
@@ -46,6 +46,10 @@
     .sidebar ul > li .buttonItem{
         color: #919191;
         padding: 12px;
+    }
+    
+    .sidebar ul > li button{
+        cursor: pointer;
     }
 
     .sidebar ul > li div{
@@ -67,5 +71,12 @@
         border-radius: 18px;
         white-space: nowrap;
     }    
+
+    .welcome-profile div{
+        border-radius: 50%;
+        background-color:  #919191;
+        width: 120px;
+        height: 120px;
+    }
 
 }

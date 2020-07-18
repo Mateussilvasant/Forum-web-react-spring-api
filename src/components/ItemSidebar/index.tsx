@@ -1,5 +1,4 @@
 import React from 'react';
-import { FaBookReader } from 'react-icons/fa';
 import { OpcaoSidebar } from '../../interfaces/OpcaoSidebar';
 
 export const ItemSidebar = (props : {ativo : boolean, opcao : OpcaoSidebar}) =>{
