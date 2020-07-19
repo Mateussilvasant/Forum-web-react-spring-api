@@ -1,19 +1,24 @@
-import React from 'react';
-import { OpcaoSidebar } from '../../interfaces/OpcaoSidebar';
+import React from "react";
+import { OpcaoSidebar } from "./types/OpcaoSidebar";
 
-export const ItemSidebar = (props : {ativo : boolean, opcao : OpcaoSidebar}) =>{
-    
-    function opcaoNormal(){
-        return <div className="buttonItem">{props.opcao.icone}<button className="button-normal">{props.opcao.valor}</button></div>
-    }
-
-    function opcaoAtivada(){
-        return <div className="buttonSelect">{props.opcao.icone}<button className="button-text-select">{props.opcao.valor}</button></div>
-    }
-
+export const ItemSidebar = (props: { ativo: boolean; opcao: OpcaoSidebar }) => {
+  function opcaoNormal() {
     return (
-        <li>
-            {props.ativo ? opcaoAtivada() : opcaoNormal()}
-        </li>
-    )
-}
+      <div className="buttonItem">
+        {props.opcao.icone}
+        <button className="button-normal">{props.opcao.valor}</button>
+      </div>
+    );
+  }
+
+  function opcaoAtivada() {
+    return (
+      <div className="buttonSelect">
+        {props.opcao.icone}
+        <button className="button-text-select">{props.opcao.valor}</button>
+      </div>
+    );
+  }
+
+  return <li>{props.ativo ? opcaoAtivada() : opcaoNormal()}</li>;
+};

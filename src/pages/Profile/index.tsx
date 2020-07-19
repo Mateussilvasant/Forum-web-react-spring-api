@@ -2,9 +2,10 @@ import React, {useState} from 'react';
 import "./index.css";
 import {FiSearch} from 'react-icons/fi';
 import SidebarComponent from '../../components/Sidebar'
-import Navbar from '../../components/Navbar';
-import TopicoResumido from '../../interfaces/TopicoResumido';
+import TopicoResumido from '../../components/Topicos/types/TopicoResumido';
 import Topicos from '../../components/Topicos';
+import { NavbarInContent } from '../../components/Navbar-In';
+import NavbarBase from '../../components/NavbarBase';
 
 
 const Profile = () => {
@@ -68,7 +69,7 @@ const Profile = () => {
         <div className="init-page">
          <SidebarComponent posicao={0}/>
             <div className="main-container">
-               <Navbar/>
+               <NavbarBase children={<NavbarInContent/>}/>
                   <main className="container">
                      <Topicos topicos={getTopicos}/>
                   </main>

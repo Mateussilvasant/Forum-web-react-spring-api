@@ -11,5 +11,3 @@ export class AuthorizationService implements AuthService,Service{
 
 export const authService = new AuthorizationService(); 
 
-
-export type auth = typeof AuthorizationService;

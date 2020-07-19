@@ -1,0 +1,14 @@
+
+@media screen and (min-width: 660px){
+
+    .navbar-home{
+        display: flex;
+        flex-direction: row;
+        padding: 12px;
+        justify-content: space-between;
+        align-items: center;
+    }    
+
+}
+
+
