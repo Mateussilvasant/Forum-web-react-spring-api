@@ -1,9 +1,9 @@
-import { initActions } from "./action";
+import { initActions, AuthorizationActionType } from "./action";
 import ServiceAction from "./service";
 import { AuthService } from "../../services/authorization/type";
 import { AuthorizationService, authService } from "../../services/authorization";
 
-export const actions = () => {
+export const ActionAuthorization = () => {
 
     const auth: AuthorizationService = authService;
 

@@ -1,20 +1,13 @@
 
 export const AUTHORIZATION = "USER_AUTHORIZATION";
 
-interface Authorization {
+export interface AuthorizationActionDispatcher {
     type: typeof AUTHORIZATION
     payload: {
         authorization: boolean
     }
 }
 
-export interface AuthorizationState {
-    authorized: boolean
-}
+export type AuthorizationActionTypes = AuthorizationActionDispatcher;
 
-export type AuthorizationActionTypes = Authorization;
-
-export enum ALL_STATUS {
-    AUTHORIZATION = "USER_AUTHORIZATION"
-}
 

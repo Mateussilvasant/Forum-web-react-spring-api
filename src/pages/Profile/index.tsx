@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import "./index.css";
-import {FiSearch} from 'react-icons/fi';
 import SidebarComponent from '../../components/Sidebar'
 import TopicoResumido from '../../components/Topicos/types/TopicoResumido';
 import Topicos from '../../components/Topicos';

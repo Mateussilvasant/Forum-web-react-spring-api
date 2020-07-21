@@ -1,4 +1,4 @@
-import React, { Fragment, FunctionComponent, Component } from "react";
+import React, { Fragment } from "react";
 import { FiSearch } from "react-icons/fi";
 import "./index.css";
 

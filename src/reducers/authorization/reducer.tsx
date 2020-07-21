@@ -1,11 +1,14 @@
 import {
   AuthorizationActionTypes,
-  AuthorizationState,
   AUTHORIZATION,
 } from "./types";
 
+export interface AuthorizationState {
+  authorized: boolean
+}
+
 const initialState: AuthorizationState = {
-  authorized: true,
+  authorized: false,
 };
 
 export function authorizationReducer(

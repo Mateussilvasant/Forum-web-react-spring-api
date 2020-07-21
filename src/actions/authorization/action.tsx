@@ -1,8 +1,10 @@
 import { AuthService } from "../../services/authorization/type";
 import ServiceAction from "./service";
+import {AuthorizationActionDispatcher } from '../../reducers/authorization/types'
+import { dispatch } from "../../helpers/store";
 
 export default interface IAuthAction{
-    checkAuthorization() : boolean;
+    checkAuthorization() : AuthorizationActionDispatcher;
 }
 
 export const initActions = (services: ServiceAction) => {
@@ -16,8 +18,16 @@ class AuthorizationAction implements IAuthAction{
         this.services = services;
     }
 
-    checkAuthorization(): boolean {
-        return true;
+    checkAuthorization(): AuthorizationActionDispatcher {
+        return{
+            type : "USER_AUTHORIZATION",
+            payload:{
+                authorization: this.services.auth.checkAuthorization()
+            }
+          }
     }
     
 } 
+
+
+export type AuthorizationActionType = typeof AuthorizationAction;
