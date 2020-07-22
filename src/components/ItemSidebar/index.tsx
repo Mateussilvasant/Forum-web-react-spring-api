@@ -1,6 +1,8 @@
 import React from "react";
 import { OpcaoSidebar } from "./types/OpcaoSidebar";
 
+
+
 export const ItemSidebar = (props: { ativo: boolean; opcao: OpcaoSidebar }) => {
   function opcaoNormal() {
     return (
