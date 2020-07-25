@@ -1,13 +1,12 @@
 import React from "react";
 import "./index.css";
-import { FaComments, FaBookReader } from "react-icons/fa";
 import { ItemSidebar } from "../ItemSidebar";
 import { OpcaoSidebar } from "../ItemSidebar/types/OpcaoSidebar";
 
 const SidebarBase = (props: { children : React.ReactNode}) => {
   return (
     <aside className="sidebar">
-      {props.children}
+          {props.children}
     </aside>
   );
 };

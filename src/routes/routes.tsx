@@ -2,8 +2,6 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import React, { useEffect } from 'react';
 import Profile from "../pages/Profile";
 import Home  from '../pages/Home';
-import { RootState } from '../helpers/reducers';
-import { dispatch } from '../helpers/store';
 import {UserAuthorization,connector} from "./connector";
 
 export function Routes(props : UserAuthorization){

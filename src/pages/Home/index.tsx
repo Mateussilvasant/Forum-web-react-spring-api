@@ -4,12 +4,12 @@ import SidebarBase from "../../components/SidebarBase";
 import Topicos from "../../components/Topicos";
 import NavbarBase from "../../components/NavbarBase";
 import { NavbarOutContent } from "../../components/Navbar-Out";
-import { SidebarIn } from "../../components/Sidebar-In";
+import { SidebarOut } from "../../components/Sidebar-Out";
 
 const Home = () => {
   return (
     <div className="init-page">
-      <SidebarBase children={<SidebarIn posicao={0} />} />
+      <SidebarBase children={<SidebarOut />} />
       <div className="main-container">
         <main className="container">
           <NavbarBase children={<NavbarOutContent />} />

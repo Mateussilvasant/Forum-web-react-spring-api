@@ -1,13 +1,10 @@
-import { initActions, AuthorizationActionType } from "./action";
-import ServiceAction from "./service";
-import { AuthService } from "../../services/authorization/type";
-import { AuthorizationService, authService } from "../../services/authorization";
+import { loadAction } from "./action";
+import { AuthService, authService } from "../../services/authorization";
 
-export const ActionAuthorization = () => {
+export default interface ServiceAction {
+    auth: AuthService;
+}
 
-    const auth: AuthorizationService = authService;
-
-    const action = initActions({ auth });
-
-    return action;
+export const AuthorizationActions  = () =>{ 
+    return loadAction({auth : authService});
 }

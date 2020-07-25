@@ -1,5 +1,8 @@
-import { AuthService } from "./type";
 import Service from '../type';
+
+export interface AuthService{
+    checkAuthorization :() => boolean
+}
 
 export class AuthorizationService implements AuthService,Service{
 

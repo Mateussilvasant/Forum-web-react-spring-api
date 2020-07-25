@@ -1,21 +1,10 @@
 
 
 
-
-
 @media screen and (min-width:660px) and (max-width:900px){
-    .sidebar ul li > div button{
-        display: none;
-    }
-
-    .sidebar ul li > .buttonSelect{
-        padding-left: 24px;
-    }       
-
-    .sidebar ul li > .buttonSelect{
-        width: auto;
-    }    
+  
 }
+
 
 @media screen and (min-width: 660px){
 
@@ -24,9 +13,11 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;    
-        flex: 0 0 12% ;
+        flex: 0 0 16% ;
+        height:auto;
         border-right: 2px solid #4a4949;
-        padding: 2%;
+        padding: 12px;
+        min-height: 100vh;
     }
 
     .button-normal{
@@ -43,22 +34,7 @@
         margin-left: 12px;
     }
     
-    .sidebar ul > li .buttonItem{
-        color: #919191;
-        padding: 12px;
-    }
-    
-    .sidebar ul > li button{
-        cursor: pointer;
-    }
-
-    .sidebar ul > li div{
-        margin-bottom: 8px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-    }
+  
     
     .buttonSelect{
         font: 500 14px Poppins, sans-serif;   
@@ -72,11 +48,5 @@
         white-space: nowrap;
     }    
 
-    .welcome-profile div{
-        border-radius: 50%;
-        background-color:  #919191;
-        width: 120px;
-        height: 120px;
-    }
 
 }

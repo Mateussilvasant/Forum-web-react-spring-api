@@ -1,0 +1,60 @@
+@media screen and (min-width:660px) and (max-width:900px){
+    .sidebar ul li > div button{
+        display: none;
+    }
+
+    .sidebar ul li > .buttonSelect{
+        padding-left: 24px;
+    }       
+
+    .sidebar ul li > .buttonSelect{
+        width: auto;
+    }    
+}
+
+
+@media screen and (min-width: 660px){
+
+    .sidebar ul > li .buttonItem{
+        color: #919191;
+        padding: 12px;
+    }
+    
+    .sidebar ul > li button{
+        cursor: pointer;
+    }
+
+    .sidebar ul > li div{
+        margin-bottom: 8px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .welcome-profile{
+        margin-bottom: 64px;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .welcome-profile div{
+        border-radius: 50%;
+        background-color:  #919191;
+        width: 45px;
+        height: 40px;
+    }
+
+    .welcome-profile strong{
+        font: 500 14px Poppins, sans-serif;   
+        color: #d3d3d3;
+    }
+
+
+
+
+
+}

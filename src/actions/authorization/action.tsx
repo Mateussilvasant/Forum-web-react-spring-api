@@ -1,33 +1,33 @@
-import { AuthService } from "../../services/authorization/type";
-import ServiceAction from "./service";
 import {AuthorizationActionDispatcher } from '../../reducers/authorization/types'
-import { dispatch } from "../../helpers/store";
+import ServiceAction from '.';
+
+let instance: AuthorizationAction;
 
 export default interface IAuthAction{
     checkAuthorization() : AuthorizationActionDispatcher;
 }
 
-export const initActions = (services: ServiceAction) => {
-    return new AuthorizationAction(services);
-}
-
-class AuthorizationAction implements IAuthAction{
+ class AuthorizationAction implements IAuthAction{
     private services: ServiceAction;
 
     constructor(services : ServiceAction){
         this.services = services;
     }
 
-    checkAuthorization(): AuthorizationActionDispatcher {
+    checkAuthorization(): AuthorizationActionDispatcher {  
         return{
             type : "USER_AUTHORIZATION",
             payload:{
                 authorization: this.services.auth.checkAuthorization()
             }
           }
-    }
-    
+    }    
 } 
 
+export function loadAction(services : ServiceAction) : AuthorizationAction{
+    if(instance === null || instance === undefined){
+         return new AuthorizationAction(services);
+    } 
+    return instance;
+ }
 
-export type AuthorizationActionType = typeof AuthorizationAction;

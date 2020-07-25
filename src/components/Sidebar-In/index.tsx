@@ -1,19 +1,36 @@
 import React, { Fragment } from "react";
 import { itemsFactory } from "../SidebarBase";
 import { OpcaoSidebar } from "../ItemSidebar/types/OpcaoSidebar";
-import { opcoesSidebar } from "./opcoes";
+import {FaAngleDown, FaBookReader, FaComments} from 'react-icons/fa'
+import "./index.css";
+
+
 
 export const SidebarIn = (props: { posicao: number }) => {
+
+    const itens = [
+    {
+      valor: "Meus tópicos",
+      path: "",
+      icone: <FaBookReader size={16} />,
+    },
+    {
+      valor: "Meus Comentários",
+      path: "",
+      icone: <FaComments size={16} />,
+    },
+  ];
+
   return (
     <Fragment>
       <section className="welcome-profile">
-        <span>
-          Bem vindo, <strong>Mateus Silva</strong>
-        </span>
+          <div></div>
+          <strong>Mateus Silva</strong>
+          <FaAngleDown className="collapseUserMenu" color="#919191" size={16}/>
       </section>
       <ul>
-        {opcoesSidebar.map((opcao: OpcaoSidebar, indice: number) =>
-          itemsFactory(opcao, indice, props.posicao)
+        {itens.map((opcao: OpcaoSidebar, indice: number) =>
+            itemsFactory(opcao, indice, props.posicao)
         )}
       </ul>
     </Fragment>

@@ -10,7 +10,7 @@
     vertical-align:baseline;
 }
 
-body{
+body,html{
     background-color:#262626;
     -webkit-font-smoothing: antialiased;
     font: 400 14px Poppins, sans-serif;
@@ -55,7 +55,7 @@ hr {
     .container {
         display: flex;
         flex-direction: row;
-        flex: 1;
+        flex: 0 0 100%;
     }  
 
 }
