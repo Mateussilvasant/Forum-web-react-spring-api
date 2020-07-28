@@ -1,18 +1,27 @@
 import {AuthorizationActionDispatcher } from '../../reducers/authorization/types'
 import ServiceAction from '.';
 
-let instance: AuthorizationAction;
 
-export default interface IAuthAction{
+ interface IAuthAction{
     checkAuthorization() : AuthorizationActionDispatcher;
 }
 
- class AuthorizationAction implements IAuthAction{
+ export class AuthorizationAction implements IAuthAction{
     private services: ServiceAction;
+    private static instance: AuthorizationAction;
 
     constructor(services : ServiceAction){
         this.services = services;
     }
+
+    static getInstance(services : ServiceAction) : AuthorizationAction{
+
+        if(this.instance === null || this.instance === undefined ){
+            this.instance = new AuthorizationAction(services);
+        } 
+
+        return this.instance;
+     }
 
     checkAuthorization(): AuthorizationActionDispatcher {  
         return{
@@ -23,11 +32,4 @@ export default interface IAuthAction{
           }
     }    
 } 
-
-export function loadAction(services : ServiceAction) : AuthorizationAction{
-    if(instance === null || instance === undefined){
-         return new AuthorizationAction(services);
-    } 
-    return instance;
- }
 

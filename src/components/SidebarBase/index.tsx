@@ -2,8 +2,10 @@ import React from "react";
 import "./index.css";
 import { ItemSidebar } from "../ItemSidebar";
 import { OpcaoSidebar } from "../ItemSidebar/types/OpcaoSidebar";
+import { SidebarOut } from "./Sidebar-Out";
+import { SidebarIn } from "./Sidebar-In";
 
-const SidebarBase = (props: { children : React.ReactNode}) => {
+const SidebarBase = (props: { children : SidebarOut | SidebarIn}) => {
   return (
     <aside className="sidebar">
           {props.children}

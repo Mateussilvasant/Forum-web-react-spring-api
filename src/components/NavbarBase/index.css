@@ -4,6 +4,7 @@
     .navbar-home{
         display: flex;
         flex-direction: row;
+        flex: 0 0 100%;
         padding: 12px;
         justify-content: space-between;
         align-items: center;

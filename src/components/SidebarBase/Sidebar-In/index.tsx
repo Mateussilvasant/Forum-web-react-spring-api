@@ -1,9 +1,8 @@
 import React, { Fragment } from "react";
-import { itemsFactory } from "../SidebarBase";
-import { OpcaoSidebar } from "../ItemSidebar/types/OpcaoSidebar";
 import {FaAngleDown, FaBookReader, FaComments} from 'react-icons/fa'
 import "./index.css";
-
+import { itemsFactory } from "..";
+import { OpcaoSidebar } from "../../ItemSidebar/types/OpcaoSidebar";
 
 
 export const SidebarIn = (props: { posicao: number }) => {
@@ -26,7 +25,7 @@ export const SidebarIn = (props: { posicao: number }) => {
       <section className="welcome-profile">
           <div></div>
           <strong>Mateus Silva</strong>
-          <FaAngleDown className="collapseUserMenu" color="#919191" size={16}/>
+          <FaAngleDown className="collapseUserMenu" color="#919191" size={16} cursor="pointer"/>
       </section>
       <ul>
         {itens.map((opcao: OpcaoSidebar, indice: number) =>
@@ -36,3 +35,5 @@ export const SidebarIn = (props: { posicao: number }) => {
     </Fragment>
   );
 };
+
+export type SidebarIn = ReturnType<typeof SidebarIn>;

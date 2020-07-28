@@ -35,3 +35,5 @@ export const NavbarInContent = () => {
       </Fragment>
     );
 }
+
+export type NavbarIn = ReturnType<typeof NavbarInContent>

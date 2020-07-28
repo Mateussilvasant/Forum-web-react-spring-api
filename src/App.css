@@ -54,7 +54,7 @@ hr {
     }
     .container {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         flex: 0 0 100%;
     }  
 

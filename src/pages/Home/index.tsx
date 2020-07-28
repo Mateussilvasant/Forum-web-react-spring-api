@@ -1,10 +1,11 @@
 import React from "react";
 import "./index.css";
 import SidebarBase from "../../components/SidebarBase";
-import Topicos from "../../components/Topicos";
 import NavbarBase from "../../components/NavbarBase";
-import { NavbarOutContent } from "../../components/Navbar-Out";
-import { SidebarOut } from "../../components/Sidebar-Out";
+import { SidebarOut } from "../../components/SidebarBase/Sidebar-Out";
+import { NavbarOutContent } from "../../components/NavbarBase/Navbar-Out";
+import { topicos } from "../../mocks/topicos";
+import { TopicosOut } from "../../components/ListaTopicos/TopicosOut";
 
 const Home = () => {
   return (
@@ -13,7 +14,7 @@ const Home = () => {
       <div className="main-container">
         <main className="container">
           <NavbarBase children={<NavbarOutContent />} />
-          <Topicos topicos={[]} />
+          <TopicosOut topicos={topicos.content} />
         </main>
         <footer></footer>
       </div>

@@ -1,10 +1,10 @@
-import { loadAction } from "./action";
-import { AuthService, authService } from "../../services/authorization";
+import { AuthorizationAction } from "./action";
+import {AuthorizationService } from "../../services/authorization";
 
 export default interface ServiceAction {
-    auth: AuthService;
+    auth: AuthorizationService;
 }
 
 export const AuthorizationActions  = () =>{ 
-    return loadAction({auth : authService});
+    return AuthorizationAction.getInstance({auth : AuthorizationService.getInstance()});
 }

@@ -1,17 +1,17 @@
 import React, {useState} from 'react';
 import "./index.css";
 import SidebarBase from '../../components/SidebarBase'
-import TopicoResumido from '../../components/Topicos/types/TopicoResumido';
-import Topicos from '../../components/Topicos';
-import { NavbarInContent } from '../../components/Navbar-In';
+import TopicoResumido from '../../components/ListaTopicos/types/TopicoResumido';
+import { NavbarInContent } from '../../components/NavbarBase/Navbar-In';
 import NavbarBase from '../../components/NavbarBase';
-import { SidebarIn } from '../../components/Sidebar-In';
-import { listaTopicos } from '../../mocks/topicos';
+import { SidebarIn } from '../../components/SidebarBase/Sidebar-In';
+import { topicos } from '../../mocks/topicos';
+import { TopicosIn } from '../../components/ListaTopicos/TopicosIn';
 
 
 const Profile = () => {
 
-   const [getTopicos, setTopicos] = useState<TopicoResumido[]>(listaTopicos);   
+   const [getTopicos, setTopicos] = useState<TopicoResumido[]>(topicos.content);   
 
      return ( 
         <div className="init-page">
@@ -19,7 +19,7 @@ const Profile = () => {
             <div className="main-container">
                <NavbarBase children={<NavbarInContent/>}/>
                   <main className="container">
-                     <Topicos topicos={getTopicos}/>
+                  <TopicosIn topicos={getTopicos} />
                   </main>
                   <footer>
                   </footer>
